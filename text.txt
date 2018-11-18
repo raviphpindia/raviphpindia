@@ -1,0 +1,410 @@
+config.spamProtectEmailAddresses = 1
+config.sys_language_uid = 0
+config.no_cache=0
+page = PAGE
+page.includeLibs.tmenu_layers = media/scripts/tmenu_layers.php
+page.typeNum = 0
+
+config.index_enable = 1
+config.index_externals = 1
+
+page.shortcutIcon = favicon.ico
+config.doctype = xhtml_trans
+
+#Copyright by dietzk.
+page.config.headerComment (
+  Development, informational architecture and design by dietzk continued by SICS 2014. - http://www.s-i-c-s.de 
+)
+
+page.meta {
+     description = Seitz, Seitz24, Textile, Laundry, Surfaces, Textilpflege, Pulver- und Flüssigwaschmittel, Reinigungsmittel, Gastronomie, Feuerwehren, Altenheime, Krankenhäuser, Hotellelerie, Responsible Care, TexCare, Messen, Detachur
+     keywords = Seitz, Seitz24, Textile, Laundry, Surfaces, Textilpflege, Pulver- und Flüssigwaschmittel , cleaners , catering , fire departments , nursing homes , hospitals AEUser , Hotellelerie , Responsible Care , TexCare , fairs , spotting # author.field = author # email.field = author_email robots = index , follow MSSmartTagsPreventParsing = true image toolbar = false }
+     
+     
+      
+      
+        
+   
+
+#Seitz, Seitz24, Textile, Laundry, Surfaces, Textile Care, Powder and Liquid Detergents, Detergents, Gastronomy, Fire Brigades, Retirement Homes, Hospitals, Hotellelerie, Responsible Care, TexCare, Fairs, Detachur 
+
+#RealURL 
+# RealURL - Settings of different languages! !!!! 
+
+config . simulateStaticDocuments = 0 config . baseURL = http : / / www .seitz24 .com / config . tx_realurl_enable = 1 page . headerData . 10 = TEXT page .
+
+
+
+
+headerData.10.value (
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" href="fileadmin/templates/css/seitz_ie.css"/>
+<![endif]-->
+<!--[if IE 6]>
+<link rel="stylesheet" type="text/css" href="fileadmin/templates/css/seitz_ie6.css"/>
+<![endif]-->
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="fileadmin/templates/css/seitz_ie8.css"/>
+<![endif]-->
+<script src="fileadmin/templates/js/functions.js"></script>
+<script type="text/javascript">
+         // <![CDATA[
+       addLoadEvent(pngRepair)       
+         // ]]>
+</script>
+<meta name="google-site-verification" content="dGdMLvmHqoOMJ7A5UgIOyteWqOm5nKsKL-40E1ygk_Q" />
+
+)
+
+
+
+page.10 = USER
+page.10.userFunc = tx_templavoila_pi1->main_page
+
+lib.myNavi= HMENU
+
+#Seiten aus US Version raus (Hauptnavi!)
+[globalVar = GP:L = 2]
+lib.myNavi.excludeUidList = 55, 151, 343, 346
+[global]
+
+
+#Seiten aus Vietnamese Version raus (Hauptnavi!)
+[globalVar = GP:L = 5]
+lib.myNavi.excludeUidList = 775, 794, 153, 347
+[global]
+
+
+#Seiten aus Russischen Version raus (Hauptnavi!)
+[globalVar = GP:L = 3]
+lib.myNavi.excludeUidList = 152, 153, 794
+[global]
+
+
+#Seiten aus französische Version raus (Hauptnavi!)
+[globalVar = GP:L = 6]
+lib.myNavi.excludeUidList = 152, 153, 794
+[global]
+
+#Seiten aus spanischen Version raus (Hauptnavi!)
+[globalVar = GP:L = 7]
+lib.myNavi.excludeUidList = 794, 153
+[global]
+
+lib.myNavi {
+  1 = TMENU_LAYERS
+  1 {
+    wrap=<ul>|</ul>
+    layerStyle =position:absolute;VISIBILITY:hidden;text-align:left;
+    lockPosition = y
+    hideMenuWhenNotOver = 1
+    hideMenuTimer=2500
+    expAll=1
+    leftOffset = 0
+    topOffset =29
+    relativeToTriggerItem = 1
+    relativeToParentLayer=1
+     
+    NO {  
+      allWrap=<li class="menu_first_item">|</li>||<li class="menu2">|</li>||<li class="menu3">|</li>||<li class="menu4">|</li>||<li class="menu5">|</li>||<li class="menu6">|</li>||<li class="menu7">|</li>||<li class="menu8">|</li>||<li class="menu_last_item">|</li>
+      #allWrap=<li class="menu_item">|</li>
+    }
+    NO = 1
+    ACT < .NO
+    ACT {
+      ATagParams = class="active"
+    }
+    ACT = 1
+    
+    CUR < .ACT
+    CUR=1
+        
+    
+  }
+  2 = TMENU
+  2.wrap = <ul class="layer_ul">|<li class="layerTable_li_last">&nbsp;</li></ul>
+  2.NO {           
+    allWrap=<li class="layerTable_li">|</li>
+    ATagParams = class="layerText"
+  }  
+  2.NO = 1
+  2.RO = 1
+}
+
+
+
+## kleine Navi oben auf Website
+lib.myHeader = HMENU
+lib.myHeader.special = directory
+lib.myHeader.special.value = 32
+lib.myHeader.1 = TMENU
+
+# lib.myHeader.1.wrap = <a href="http://www.seitz24.com/en"><img src="fileadmin/templates/img/gb_final.gif" border="0" alt="english version" title="English version" >English version</a> &nbsp&nbsp <a href="http://www.seitz24.com/ru"><img src="fileadmin/templates/img/ru_final.gif" border="0" alt="russian version" title="russian version" >Русский язык</a> &nbsp&nbsp <a href="http://www.seitz24.com/vn"><img src="fileadmin/templates/img/vi_final.gif" border="0" alt="vietnamese version" title="vietnamese version" >Tiếng Việt</a> &nbsp&nbsp <a href="http://www.seitz24.com/fr"><img src="fileadmin/templates/img/fr_final.gif" border="0" alt="version française" title="Version française" >Version française</a>| <form method="post" action="/de/suche/" style="display: inline;"><input id="tx-indexedsearch-searchbox-sword" class="search_input" type="text" value="" name="tx_indexedsearch[sword]"/><input type="image" src="fileadmin/templates/img/Pfeil_Button.png"></form>
+lib.myHeader.1.wrap = <a href="http://www.seitz24.com/de"><img src="fileadmin/templates/img/de_final.gif" border="0" alt="deutsche version" title="Deutsche Version" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/en"><img src="fileadmin/templates/img/gb_final.gif" border="0" alt="english version" title="English version" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/fr"><img src="fileadmin/templates/img/fr_final.gif" border="0" alt="version française" title="Version française" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/es"><img src="fileadmin/templates/img/spain.jpg" border="0" alt="spanish version" title="Spanish version" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/ru"><img src="fileadmin/templates/img/ru_final.gif" border="0" alt="russian version" title="Русский язык" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/vn"><img src="fileadmin/templates/img/vi_final.gif" border="0" alt="vietnamese version" title="Tiếng Việt" ></a> &nbsp&nbsp | <form method="post" action="/de/suche/" style="display: inline;"><input id="tx-indexedsearch-searchbox-sword" class="search_input" type="text" value="" name="tx_indexedsearch[sword]"/><input type="image" src="fileadmin/templates/img/Pfeil_Button.png"></form>
+
+lib.myHeader.1.NO {
+  allWrap = &nbsp;&nbsp;I&nbsp;&nbsp;|&nbsp;&nbsp;I|*|&nbsp;&nbsp;|&nbsp;&nbsp;I|*|&nbsp;&nbsp;|&nbsp;&nbsp; 
+}
+## kleine Navi End
+
+
+[globalVar = GP:L=1]
+# lib.myHeader.1.wrap = <a href="http://www.seitz24.com/de"><img src="fileadmin/templates/img/de_final.gif" border="0" alt="german version" title="german version" >Deutsche Version</a> &nbsp&nbsp <a href="http://www.seitz24.com/ru"><img src="fileadmin/templates/img/ru_final.gif" border="0" alt="russian version" title="russian version" >Русский язык</a>  &nbsp&nbsp <a href="http://www.seitz24.com/fr"><img src="fileadmin/templates/img/fr_final.gif" border="0" alt="version française" title="Version française" >Version française</a> <form method="post" action="/de/suche/" style="display: inline;"><input id="tx-indexedsearch-searchbox-sword" class="search_input" type="text" value="" name="tx_indexedsearch[sword]"/><input type="image" src="fileadmin/templates/img/Pfeil_Button.png"></form>
+lib.myHeader.1.wrap = <a href="http://www.seitz24.com/de"><img src="fileadmin/templates/img/de_final.gif" border="0" alt="german version" title="Deutsche Version" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/es"><img src="fileadmin/templates/img/spain.jpg" border="0" alt="spanish version" title="Spanish version" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/en"><img src="fileadmin/templates/img/gb_final.gif" border="0" alt="english version" title="English version" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/ru"><img src="fileadmin/templates/img/ru_final.gif" border="0" alt="russian version" title="Русский язык" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/vn"><img src="fileadmin/templates/img/vi_final.gif" border="0" alt="vietnamese version" title="Tiếng Việt" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/fr"><img src="fileadmin/templates/img/fr_final.gif" border="0" alt="version française" title="Version française" ></a>| <form method="post" action="/de/suche/" style="display: inline;"><input id="tx-indexedsearch-searchbox-sword" class="search_input" type="text" value="" name="tx_indexedsearch[sword]"/><input type="image" src="fileadmin/templates/img/Pfeil_Button.png"></form>
+
+[global]
+
+
+## Breadcrumb [Begin]
+lib.myBreadcrumb = COA
+lib.myBreadcrumb.10 = TEXT
+lib.myBreadcrumb.10.value = Sie sind hier:&nbsp;
+lib.myBreadcrumb.20 = HMENU
+lib.myBreadcrumb.20 {
+
+  special = rootline
+  wrap = | 
+  #0=Startlevel, 3= Anzahl Levels
+  special.range = 1|3
+  1 = TMENU
+  1.NO.linkWrap = &raquo; |&nbsp;
+  1.NO = 1
+}
+## Breadcrumb [End]
+
+##Subnavi bei Innenseiten
+
+temp.tmenu= HMENU 
+temp.tmenu.entryLevel = 1
+temp.tmenu.wrap = <img src="fileadmin/templates/img/navi_oben.gif">|<img src="fileadmin/templates/img/navi_unten.gif">
+temp.tmenu{
+  # erstes level
+  1 = TMENU
+  1.wrap = <ul class="menu-level1">|</ul>
+  1{
+      # no state: normale Formatierung
+    NO{
+      wrapItemAndSub = <li>&nbsp;<img src="fileadmin/templates/img/pfeil_gruen.gif" align="absmiddle" border="0">&nbsp;&nbsp;|</li>
+    }
+       # act state: gültig von der rootseite bis zur aktuellen Seite
+    ACT=1
+    ACT{
+      wrapItemAndSub = <li>&nbsp;<img src="fileadmin/templates/img/pfeil_gruen.gif" align="absmiddle" border="0">&nbsp;&nbsp;|</li>
+    }
+       # cur state: gültig für die aktuelle Seite
+    CUR=1
+    CUR{
+      wrapItemAndSub = <li>&nbsp;<img src="fileadmin/templates/img/pfeil_gruen.gif" align="absmiddle" border="0">&nbsp;&nbsp;<b>|</b></li>
+    }
+       # ifsub state: gültig für seiten die unterseiten haben
+    IFSUB=1
+    IFSUB{
+      wrapItemAndSub = <li>&nbsp;<img src="fileadmin/templates/img/pfeil_gruen.gif" align="absmiddle" border="0">&nbsp;&nbsp;|</li>
+    }
+  }
+  # zweites level   
+  2 = TMENU
+  2.wrap = |
+  2{
+    NO{
+      wrapItemAndSub = <li class="menu-level2">|</li>
+    }
+    ACT=1
+    ACT{
+      wrapItemAndSub = <li class="menu-level2-active">|</li>
+    }
+    CUR=1
+    CUR{
+      wrapItemAndSub = <li class="menu-level2-current-active">|</li>
+    }
+    IFSUB=1
+    IFSUB{
+      wrapItemAndSub = <li class="menu-level2-with-subpage">|</li>
+    }
+  }
+  
+  # drittes level   
+  3 = TMENU
+  3.wrap = |
+  3{
+    NO{
+      wrapItemAndSub = <li class="menu-level3">|</li>
+    }
+    ACT=1
+    ACT{
+      wrapItemAndSub = <li class="menu-level3-active">|</li>
+    }
+    CUR=1
+    CUR{
+      wrapItemAndSub = <li class="menu-level3-current-active">|</li>
+    }
+    IFSUB=1
+    IFSUB{
+      wrapItemAndSub = <li class="menu-level3-with-subpage">|</li>
+    }
+  }  
+}
+
+#Seiten aus US Version raus (Subnavi!)
+[globalVar = GP:L = 2]
+temp.tmenu.excludeUidList = 343, 346, 897
+[global]
+
+#Seiten aus GB Version raus (Subnavi!)
+[globalVar = GP:L = 1]
+temp.tmenu.excludeUidList = 897
+[global]
+
+#Seiten aus Vietnamese Version raus (Subnavi!)
+[globalVar = GP:L = 5]
+temp.tmenu.excludeUidList = 775, 153, 767, 343, 347, 897
+[global]
+
+
+#Seiten aus Russischer Version raus (Subnavi!)
+[globalVar = GP:L = 3]
+temp.tmenu.excludeUidList = 152, 153, 345, 897
+[global]
+
+
+#Seiten aus französischen Version raus (Subnavi!)
+[globalVar = GP:L = 6]
+temp.tmenu.excludeUidList = 152, 153, 345, 767, 897
+[global]
+
+#Seiten aus spanischen Version raus (Subnavi!)
+[globalVar = GP:L = 7]
+temp.tmenu.excludeUidList = 152, 153, 345 
+[global]
+
+## 152 = Onlineshop 
+## 153 = Sonderverkauf 
+## 345 = Pflegekennzeichen
+## 767 = FAQs Green Earth
+## 897 = Pflegeleitfaden Feuerwehr
+
+lib.mySubNavi < temp.tmenu
+
+
+##Ende Subnavi
+
+#bodytext class raus
+lib.parseFunc_RTE.nonTypoTagStdWrap.encapsLines.addAttributes >
+
+#Tracking
+page.1002 = HTML
+page.1002.value (
+
+
+
+
+
+<script src="http://www.seitz24.com/dtrack.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">dtrack.init(177939);</script>
+
+
+<noscript><p><img alt="dtrack" width="1" height="1" src="http://www.walter.poleni.com/de/177939ns.gif" /></p></noscript>
+)
+
+
+config.linkVars = L
+config.sys_language_mode = content_fallback
+config.sys_language_overlay = 1
+
+# Deutsch
+[globalVar = GP:L = 0]
+config.sys_language_uid=0
+config.language = de
+config.locale_all = deutsch
+[global]
+
+# Englisch
+[globalVar = GP:L = 1]
+config.sys_language_uid=1
+config.language = en
+config.locale_all = englisch
+lib.myBreadcrumb.10.value = You are here:&nbsp;
+# lib.myHeader.1.wrap = <a href="http://www.seitz24.com/de"><img src="fileadmin/templates/img/de_final.gif" border="0" alt="deutsche version" title="deutsche version" >Deutsche Version</a> &nbsp&nbsp <a href="http://www.seitz24.com/ru"><img src="fileadmin/templates/img/ru_final.gif" border="0" alt="russian version" title="russian version" >Русский язык</a> &nbsp&nbsp <a href="http://www.seitz24.com/vn"><img src="fileadmin/templates/img/vi_final.gif" border="0" alt="vietnamese version" title="vietnamese version" >Tiếng Việt</a> &nbsp&nbsp <a href="http://www.seitz24.com/fr"><img src="fileadmin/templates/img/fr_final.gif" border="0" alt="version française" title="Version française" >Version française</a>| <form method="post" action="/de/suche/" style="display: inline;"><input id="tx-indexedsearch-searchbox-sword" class="search_input" type="text" value="" name="tx_indexedsearch[sword]"/><input type="image" src="fileadmin/templates/img/Pfeil_Button.png"></form>
+lib.myHeader.1.wrap = <a href="http://www.seitz24.com/de"><img src="fileadmin/templates/img/de_final.gif" border="0" alt="deutsche version" title="Deutsche Version" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/en"><img src="fileadmin/templates/img/gb_final.gif" border="0" alt="english version" title="English version" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/fr"><img src="fileadmin/templates/img/fr_final.gif" border="0" alt="version française" title="Version française" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/es"><img src="fileadmin/templates/img/spain.jpg" border="0" alt="spanish version" title="Spanish version" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/ru"><img src="fileadmin/templates/img/ru_final.gif" border="0" alt="russian version" title="Русский язык" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/vn"><img src="fileadmin/templates/img/vi_final.gif" border="0" alt="vietnamese version" title="Tiếng Việt" ></a> &nbsp&nbsp | <form method="post" action="/de/suche/" style="display: inline;"><input id="tx-indexedsearch-searchbox-sword" class="search_input" type="text" value="" name="tx_indexedsearch[sword]"/><input type="image" src="fileadmin/templates/img/Pfeil_Button.png"></form>
+[global]
+
+
+# Russian
+[globalVar = GP:L = 3]
+config.sys_language_uid=3
+config.language = ru
+config.locale_all = ru_RU
+lib.myBreadcrumb.10.value = Вы находитесь здесь:&nbsp;
+# lib.myHeader.1.wrap = <a href="http://www.seitz24.com/en"><img src="fileadmin/templates/img/gb_final.gif" border="0" alt="english version" title="english version" >English</a> &nbsp&nbsp <a href="http://www.seitz24.com/de"><img src="fileadmin/templates/img/de_final.gif" border="0" alt="Deutsche Version" title="Deutsche Version" >Deutsch</a> &nbsp&nbsp <a href="http://www.seitz24.com/vn"><img src="fileadmin/templates/img/vi_final.gif" border="0" alt="vietnamese version" title="vietnamese version" >Tiếng Việt</a>  &nbsp&nbsp <a href="http://www.seitz24.com/fr"><img src="fileadmin/templates/img/fr_final.gif" border="0" alt="version française" title="Version française" >France</a>| <form method="post" action="/de/suche/" style="display: inline;"><input id="tx-indexedsearch-searchbox-sword" class="search_input" type="text" value="" name="tx_indexedsearch[sword]"/><input type="image" src="fileadmin/templates/img/Pfeil_Button.png"></form>
+lib.myHeader.1.wrap = <a href="http://www.seitz24.com/de"><img src="fileadmin/templates/img/de_final.gif" border="0" alt="deutsche version" title="Deutsche Version" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/en"><img src="fileadmin/templates/img/gb_final.gif" border="0" alt="english version" title="English version" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/fr"><img src="fileadmin/templates/img/fr_final.gif" border="0" alt="version française" title="Version française" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/es"><img src="fileadmin/templates/img/spain.jpg" border="0" alt="spanish version" title="Spanish version" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/ru"><img src="fileadmin/templates/img/ru_final.gif" border="0" alt="russian version" title="Русский язык" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/vn"><img src="fileadmin/templates/img/vi_final.gif" border="0" alt="vietnamese version" title="Tiếng Việt" ></a> &nbsp&nbsp | <form method="post" action="/de/suche/" style="display: inline;"><input id="tx-indexedsearch-searchbox-sword" class="search_input" type="text" value="" name="tx_indexedsearch[sword]"/><input type="image" src="fileadmin/templates/img/Pfeil_Button.png"></form>
+[global]
+
+
+# Vietnamesisch
+[globalVar = GP:L = 5]
+config.sys_language_uid=5
+config.language = vn
+config.locale_all = vn_VN
+lib.myBreadcrumb.10.value = Bạn đang xem:&nbsp;
+# lib.myHeader.1.wrap = <a href="http://www.seitz24.com/en"><img src="fileadmin/templates/img/gb_final.gif" border="0" alt="english version" title="english version" >English version</a> &nbsp&nbsp <a href="http://www.seitz24.com/ru"><img src="fileadmin/templates/img/ru_final.gif" border="0" alt="russian version" title="russian version" >Русский язык</a> &nbsp&nbsp <a href="http://www.seitz24.com/de"><img src="fileadmin/templates/img/de_final.gif" border="0" alt="Deutsche Version" title="Deutsche Version" >Deutsche Version</a>  &nbsp&nbsp <a href="http://www.seitz24.com/fr"><img src="fileadmin/templates/img/fr_final.gif" border="0" alt="version française" title="Version française" >Version française</a>| <form method="post" action="/de/suche/" style="display: inline;"><input id="tx-indexedsearch-searchbox-sword" class="search_input" type="text" value="" name="tx_indexedsearch[sword]"/><input type="image" src="fileadmin/templates/img/Pfeil_Button.png"></form>
+lib.myHeader.1.wrap = <a href="http://www.seitz24.com/de"><img src="fileadmin/templates/img/de_final.gif" border="0" alt="deutsche version" title="Deutsche Version" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/en"><img src="fileadmin/templates/img/gb_final.gif" border="0" alt="english version" title="English version" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/fr"><img src="fileadmin/templates/img/fr_final.gif" border="0" alt="version française" title="Version française" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/es"><img src="fileadmin/templates/img/spain.jpg" border="0" alt="spanish version" title="Spanish version" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/ru"><img src="fileadmin/templates/img/ru_final.gif" border="0" alt="russian version" title="Русский язык" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/vn"><img src="fileadmin/templates/img/vi_final.gif" border="0" alt="vietnamese version" title="Tiếng Việt" ></a> &nbsp&nbsp | <form method="post" action="/de/suche/" style="display: inline;"><input id="tx-indexedsearch-searchbox-sword" class="search_input" type="text" value="" name="tx_indexedsearch[sword]"/><input type="image" src="fileadmin/templates/img/Pfeil_Button.png"></form>
+[global]
+
+#Französisch
+[globalVar = GP:L = 6]
+config.sys_language_uid=6
+config.language = fr
+config.locale_all = fr_FR
+lib.myBreadcrumb.10.value = Vous êtes ici:&nbsp;
+# lib.myHeader.1.wrap = <a href="http://www.seitz24.com/en"><img src="fileadmin/templates/img/gb_final.gif" border="0" alt="english version" title="english version" >English version</a> &nbsp&nbsp <a href="http://www.seitz24.com/ru"><img src="fileadmin/templates/img/ru_final.gif" border="0" alt="russian version" title="russian version" >Русский язык</a> &nbsp&nbsp <a href="http://www.seitz24.com/de"><img src="fileadmin/templates/img/de_final.gif" border="0" alt="Deutsche Version" title="Deutsche Version" >Deutsche Version</a> &nbsp&nbsp <a href="http://www.seitz24.com/vn"><img src="fileadmin/templates/img/vi_final.gif" border="0" alt="vietnamese version" title="vietnamese version" >Tiếng Việt</a>| <form method="post" action="/de/suche/" style="display: inline;"><input id="tx-indexedsearch-searchbox-sword" class="search_input" type="text" value="" name="tx_indexedsearch[sword]"/><input type="image" src="fileadmin/templates/img/Pfeil_Button.png"></form>
+lib.myHeader.1.wrap = <a href="http://www.seitz24.com/de"><img src="fileadmin/templates/img/de_final.gif" border="0" alt="deutsche version" title="Deutsche Version" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/en"><img src="fileadmin/templates/img/gb_final.gif" border="0" alt="english version" title="English version" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/fr"><img src="fileadmin/templates/img/fr_final.gif" border="0" alt="version française" title="Version française" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/es"><img src="fileadmin/templates/img/spain.jpg" border="0" alt="spanish version" title="Spanish version" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/ru"><img src="fileadmin/templates/img/ru_final.gif" border="0" alt="russian version" title="Русский язык" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/vn"><img src="fileadmin/templates/img/vi_final.gif" border="0" alt="vietnamese version" title="Tiếng Việt" ></a> &nbsp&nbsp | <form method="post" action="/de/suche/" style="display: inline;"><input id="tx-indexedsearch-searchbox-sword" class="search_input" type="text" value="" name="tx_indexedsearch[sword]"/><input type="image" src="fileadmin/templates/img/Pfeil_Button.png"></form>
+[global]
+
+#Spanisch
+[globalVar = GP:L = 7]
+config.sys_language_uid=7
+config.language = es
+config.locale_all = es_ES
+lib.myBreadcrumb.10.value = Se encuentra aquí:&nbsp;
+# lib.myHeader.1.wrap = <a href="http://www.seitz24.com/en"><img src="fileadmin/templates/img/gb_final.gif" border="0" alt="english version" title="english version" >English version</a> &nbsp&nbsp <a href="http://www.seitz24.com/ru"><img src="fileadmin/templates/img/ru_final.gif" border="0" alt="russian version" title="russian version" >Русский язык</a> &nbsp&nbsp <a href="http://www.seitz24.com/de"><img src="fileadmin/templates/img/de_final.gif" border="0" alt="Deutsche Version" title="Deutsche Version" >Deutsche Version</a>| <form method="post" action="/de/suche/" style="display: inline;"><input id="tx-indexedsearch-searchbox-sword" class="search_input" type="text" value="" name="tx_indexedsearch[sword]"/><input type="image" src="fileadmin/templates/img/Pfeil_Button.png"></form>
+lib.myHeader.1.wrap = <a href="http://www.seitz24.com/de"><img src="fileadmin/templates/img/de_final.gif" border="0" alt="deutsche version" title="Deutsche Version" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/en"><img src="fileadmin/templates/img/gb_final.gif" border="0" alt="english version" title="English version" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/fr"><img src="fileadmin/templates/img/fr_final.gif" border="0" alt="version française" title="Version française" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/es"><img src="fileadmin/templates/img/spain.jpg" border="0" alt="spanish version" title="Spanish version" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/ru"><img src="fileadmin/templates/img/ru_final.gif" border="0" alt="russian version" title="Русский язык" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/vn"><img src="fileadmin/templates/img/vi_final.gif" border="0" alt="vietnamese version" title="Tiếng Việt" ></a> &nbsp&nbsp | <form method="post" action="/de/suche/" style="display: inline;"><input id="tx-indexedsearch-searchbox-sword" class="search_input" type="text" value="" name="tx_indexedsearch[sword]"/><input type="image" src="fileadmin/templates/img/Pfeil_Button.png"></form>
+[global]
+
+## kleine Navi oben auf Website
+lib.myHeader = HMENU
+lib.myHeader.special = directory
+lib.myHeader.special.value = 32
+lib.myHeader.1 = TMENU
+
+[browser = msie]
+config.xmlprologue = none
+[global]
+
+# -------------------- EINGEFÜGT ----------------------
+# Russian
+[globalVar = GP:L = 3]
+config.sys_language_uid=3
+config.language = ru
+config.locale_all = ru_RU
+lib.myBreadcrumb.10.value = Вы находитесь здесь:&nbsp;
+
+# lib.myHeader.1.wrap = <a href="http://www.seitz24.com/en"><img src="fileadmin/templates/img/gb_final.gif" border="0" alt="english version" title="english version" >English</a> &nbsp&nbsp <a href="http://www.seitz24.com/de"><img src="fileadmin/templates/img/de_final.gif" border="0" alt="Deutsch" title="Deutsche Version" >Deutsch</a> &nbsp&nbsp <a href="http://www.seitz24.com/vn"><img src="fileadmin/templates/img/vi_final.gif" border="0" alt="vietnamese version" title="vietnamese version" >Tiếng Việt</a> &nbsp&nbsp <a href="http://www.seitz24.com/fr"><img src="fileadmin/templates/img/fr_final.gif" border="0" alt="Français" title="Version française" >Français</a>| <form method="post" action="/de/suche/" style="display: inline;"><input id="tx-indexedsearch-searchbox-sword" class="search_input" type="text" value="" name="tx_indexedsearch[sword]"/><input type="image" src="fileadmin/templates/img/Pfeil_Button.png"></form>
+lib.myHeader.1.wrap = <a href="http://www.seitz24.com/de"><img src="fileadmin/templates/img/de_final.gif" border="0" alt="deutsche version" title="Deutsche Version" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/en"><img src="fileadmin/templates/img/gb_final.gif" border="0" alt="english version" title="English version" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/fr"><img src="fileadmin/templates/img/fr_final.gif" border="0" alt="version française" title="Version française" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/es"><img src="fileadmin/templates/img/spain.jpg" border="0" alt="spanish version" title="Spanish version" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/ru"><img src="fileadmin/templates/img/ru_final.gif" border="0" alt="russian version" title="Русский язык" ></a> &nbsp&nbsp <a href="http://www.seitz24.com/vn"><img src="fileadmin/templates/img/vi_final.gif" border="0" alt="vietnamese version" title="Tiếng Việt" ></a> &nbsp&nbsp | <form method="post" action="/de/suche/" style="display: inline;"><input id="tx-indexedsearch-searchbox-sword" class="search_input" type="text" value="" name="tx_indexedsearch[sword]"/><input type="image" src="fileadmin/templates/img/Pfeil_Button.png"></form>
+
+[global]
+#--------------------- ENDE -----------------------
+
+page.includeJS {
+
+  file6589320 = EXT:atnetws_cookieconsent/res/js/cookieconsent.min.js
+  file6589321 = EXT:atnetws_cookieconsent/res/js/cookieconsent_init.js
+
+}
+
+page.includeCSS {
+
+  file6589320 = EXT:atnetws_cookieconsent/res/css/cookieconsent.min.css
+
+}
