@@ -1,4 +1,4 @@
-config.spamProtectEmailAddresses = 1
+config.spamProtectEmailAddresses = 123456
 config.sys_language_uid = 0
 config.no_cache=0
 page = PAGE
